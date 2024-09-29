@@ -1,10 +1,24 @@
 // Function to calculate NSSF deductions
 function calculateNSSF(grossSalary) {
-  if (grossSalary <= 18000) {
-      return 0.06 * grossSalary;
+  let nssfContribution = 0;
+  
+  // Tier I: Up to KES 7,000
+  if (grossSalary <= 7000) {
+    nssfContribution = grossSalary * 0.06;  // 6% of gross salary
   } else {
-      return 0.06 * 18000;
+    // Contributions for Tier I capped at 7,000
+    nssfContribution = 7000 * 0.06;  // 6% of the first 7,000
+
+    // Tier II: From KES 7,001 to KES 36,000 
+    if (grossSalary > 7000 && grossSalary <= 36000) {
+      nssfContribution += (grossSalary - 7000) * 0.06;  // 6% on the remainder up to 36,000
+    } else if (grossSalary > 36000) {
+      // Contributions for Tier II capped at 36,000
+      nssfContribution += (36000 - 7000) * 0.06;  
+    }
   }
+
+  return nssfContribution;
 }
 
 // Function to calculate NHIF deductions
