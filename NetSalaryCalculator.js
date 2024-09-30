@@ -80,7 +80,7 @@ function calculatePAYE(grossSalary) {
   const personalRelief = 2400;
   paye -= personalRelief;
 
-  return Math.max(0, paye); // Ensure Payee is not negative
+  return Math.max(0, paye); // paye should not be negative
 }
 
 // Main function to calculate Net Salary
