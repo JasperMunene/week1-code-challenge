@@ -26,10 +26,8 @@ To run these challenges on your local machine, follow these steps:
     ```bash
     code .
     ```
-4. **Run the code in a browser or Node.js environment:**
-    ```bash
-    node <filename>.js
-    ```
+4. **Run the code in a browser:**
+
 ## Author
 Jasper Munene
 
