@@ -97,7 +97,6 @@ function calculateNetSalary(basicSalary, benefits) {
   const netSalary = grossSalary - (nssf + nhif + payee);
 
   alert(`Net Salary: KES ${netSalary.toFixed(2)}`);
-  return netSalary;
 }
 
 // Prompts with input validation
