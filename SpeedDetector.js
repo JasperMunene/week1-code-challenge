@@ -9,7 +9,7 @@ function speedDetector(speed) {
     // Check if the speed is within the speed limit
     if (speed <= speedLimit) {
         // If speed is within the limit, print "Ok"
-        console.log("Ok");
+        alert("Ok");
     } else {
         // Calculate the number of demerit points
         // For every 5 km/h above the speed limit, 1 demerit point is assigned
@@ -18,12 +18,22 @@ function speedDetector(speed) {
         // Check if the number of demerit points exceeds the maximum allowed
         if (demeritPoints > maxDemeritPoints) {
             // If demerit points exceed 12, suspend the license
-            console.log("License Suspended");
+            alert("License Suspended");
         } else {
-            console.log(`Points: ${demeritPoints}`);
+            alert(`Points: ${demeritPoints}`);
         }
     }
 }
 
+// Prompt user to input speed
+let userSpeed = parseInt(prompt("Enter your speed: "));
 
-speedDetector(80);
+if (isNaN(userSpeed)) {
+    alert("Invalid input! Please enter a valid number as your speed")
+} else {
+    //calculate speed
+    speedDetector(userSpeed);
+}
+
+
+

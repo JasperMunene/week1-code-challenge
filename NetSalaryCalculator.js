@@ -96,7 +96,7 @@ function calculateNetSalary(basicSalary, benefits) {
   // Calculate net salary
   const netSalary = grossSalary - (nssf + nhif + payee);
 
-  console.log(`Net Salary: KES ${netSalary.toFixed(2)}`);
+  alert(`Net Salary: KES ${netSalary.toFixed(2)}`);
   return netSalary;
 }
 
@@ -106,7 +106,7 @@ let benefits = parseInt(prompt("Enter the Benefits (KES): "));
 
 // Validate inputs
 if (isNaN(basicSalary) || isNaN(benefits)) {
-  console.error("Invalid input! Please enter a valid number for both basic salary and benefits.");
+  alert("Invalid input! Please enter a valid number for both basic salary and benefits.");
 } else {
   // Calculate Net Salary
   calculateNetSalary(basicSalary, benefits);

@@ -6,7 +6,7 @@ marks = Number(marks);
 
 // Check if the input is a valid number within 0 to 100
 if (isNaN(marks) || marks < 0 || marks > 100) {
-    console.log('Please enter a number between 0 and 100');
+    alert('Please enter a number between 0 and 100');
 } else {
     let grade;
     
@@ -23,5 +23,6 @@ if (isNaN(marks) || marks < 0 || marks > 100) {
         grade = 'E';  // Grade E for marks below 40
     }
 
-    return grade;
+    //Alert the user with the final student grade
+    alert(`Student grade is ${grade}`)
 }
